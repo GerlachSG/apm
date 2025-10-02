@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AAPM SJC</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <nav>
+        <div class="menu-container">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#" class="logo"><img src="./assets/logo_aapm.svg" alt="AAPM"></a></li>
+            <li><a href="#">Produtos <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M5 3.45 8.45 0 9.5 1.05 5 5.55.5 1.05 1.55 0z" fill="CurrentColor"/></svg></a>
+               <ul class="submenu">
+                <li><a href="#">Uniforme</a></li>
+                <li><a href="#">Material</a></li>
+                <li><a href="#">EPI</a></li>
+
+                <div class="associado-line"></div>
+                <li><a href="#" id="btn-associado"><strong>Seja Associado</strong>
+                <div class="star-1">
+                  <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#FF8000"/></svg>
+                </div>
+                <div class="star-2">
+                <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#92B635"/></svg>
+                </div>
+                <div class="star-3">
+                  <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#2BA7E7"/></svg>
+                </div>
+                <div class="star-4">
+                  <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#2F3590"/></svg>
+                </div>
+                <div class="star-5">
+                  <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#D90D7B"/></svg>
+                </div>
+                <div class="star-6">
+                <svg viewBox="0 0 784.11 815.53" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="M392.05 0C371.15 210.08 207.99 378.41 0 407.78c207.96 29.37 371.12 197.68 392.05 407.74 20.93-210.06 184.09-378.37 392.05-407.74C576.12 378.4 412.94 210.09 392.04 0z" fill="#eb3939"/></svg>
+                </div></a> 
+                <div class="nav-associado"></div></li>
+              </ul>
+
+            </li>
+            <li><a href="#">Eventos <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M5 3.45 8.45 0 9.5 1.05 5 5.55.5 1.05 1.55 0z" fill="CurrentColor"/></svg></a>
+              <ul class="submenu">
+                <li><a href="#">Gincana</a></li>
+                <li><a href="#">Placeholder</a></li>
+                <li><a href="#">Placeholder</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button id="btn">
+
+            <svg width="18" height="21" viewBox="0 0 18 21" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 21C1.45 21 0.979167 20.8042 0.5875 20.4125C0.195833 20.0208 0 19.55 0 19V7C0 6.45 0.195833 5.97917 0.5875 5.5875C0.979167 5.19583 1.45 5 2 5H4C4 3.61667 4.4875 2.4375 5.4625 1.4625C6.4375 0.4875 7.61667 0 9 0C10.3833 0 11.5625 0.4875 12.5375 1.4625C13.5125 2.4375 14 3.61667 14 5H16C16.55 5 17.0208 5.19583 17.4125 5.5875C17.8042 5.97917 18 6.45 18 7V19C18 19.55 17.8042 20.0208 17.4125 20.4125C17.0208 20.8042 16.55 21 16 21H2ZM2 19H16V7H2V19ZM9 13C10.3833 13 11.5625 12.5125 12.5375 11.5375C13.5125 10.5625 14 9.38333 14 8H12C12 8.83333 11.7083 9.54167 11.125 10.125C10.5417 10.7083 9.83333 11 9 11C8.16667 11 7.45833 10.7083 6.875 10.125C6.29167 9.54167 6 8.83333 6 8H4C4 9.38333 4.4875 10.5625 5.4625 11.5375C6.4375 12.5125 7.61667 13 9 13ZM6 5H12C12 4.16667 11.7083 3.45833 11.125 2.875C10.5417 2.29167 9.83333 2 9 2C8.16667 2 7.45833 2.29167 6.875 2.875C6.29167 3.45833 6 4.16667 6 5Z" fill="currentColor"/>
+            </svg>
+            </button>
+      </nav>
+
+
+    <section class="section-slide">
+        <div class="slider">
+            <div class="slider-container prev">
+                <div class="slide-img">
+                    <img src="./assets/img6.png" alt="Projetos para o Mundo">
+                </div>
+            </div>
+        
+            <div class="slider-container active">
+                <div class="slide-img">
+                    <img src="./assets/img1.png" alt="Dia das Mulheres">
+                </div>
+            </div>
+        
+            <div class="slider-container next">
+                <div class="slide-img">
+                    <img src="./assets/img2.png" alt="Novo E-Commerce APPM">
+                </div>
+            </div>
+        
+            <div class="slider-counter">
+                <p><span>1</span><span>/</span><span>6</span></p>
+            </div>
+        
+            <div class="slider-items">
+                <p class="activeItem">Dia das Mulheres</p>
+                <p>Novo E-Commerce APPM</p>
+                <p>Conscientização Setembro</p>
+                <p>Dia do Autista</p>
+                <p>Gincana 2025</p>
+                <p>Projetos para o Mundo</p>
+            </div>
+        
+            <div class="slider-preview">
+                <img src="assets/img1.png" alt="Dia das Mulheres">
+        </div>
+
+        <div class="progress-container">
+            <svg class="progress-circle" width="40" height="40" viewBox="0 0 40 40">
+              <circle class="progress-circle-bg" cx="20" cy="20" r="18" fill="none" stroke="#e6e6e6" stroke-width="1"/>
+              <circle class="progress-circle-fill" cx="20" cy="20" r="18" fill="none" stroke="#000" stroke-width="1" 
+                      stroke-dasharray="113" stroke-dashoffset="113" transform="rotate(-90 20 20)"/>
+            </svg>
+          </div>
+    </section>
+
+
+   <section class="section-2">
+        <h1>Você vai encontrar</h1>
+
+        <div class="container-card">
+            <ul class="scroll-card" role="list">
+                <li class="card-grid"roles="list-item">
+                    <div>
+                        <div class="texto-card">
+                            <p class="mini-titulo-card">Associação de Alunos, Ex-alunos, Pais e Mestres</p>
+                            <h1 class="titulo-card">veja agora o <b>Blog</b> da <b>AAPM!</b></h1>
+                        </div>
+
+                        <div class="imagem-card">
+                            <img src="./assets/section-2/Logo.png" alt="img">
+                        </div>
+                        <button class="animated-button">
+                            <p>Continuar</p>
+                            <img src="./assets/section-2/arrow.svg"></img>
+                        </button>                     
+                    </div>
+                </li>
+
+                <li class="card-grid"role="list-item">
+                    <div>
+                        <div class="texto-card">
+                            <p class="mini-titulo-card">Reserve pelo site e compre no SENAI</p>
+                            <h1 class="titulo-card">conheça o novo <b>Catalogo</b></h1>
+                        </div>
+
+                        <div class="imagem-card">
+                            <img src="./assets/section-2/imagem-2.png" alt="img">
+                        </div>
+                        <button class="animated-button">
+                            <p>Continuar</p>
+                            <img src="./assets/section-2/arrow.svg"></img>
+                        </button>
+                    </div>
+
+                </li>
+
+                <li class="card-grid"role="list-item">
+                    <div>
+                        <div class="texto-card">
+                            <p class="mini-titulo-card">Confira os benefícios</p>
+                            <h1 class="titulo-card">seja <b>Associado</b> AAPM!</h1>
+                        </div>
+
+                        <div class="imagem-card">
+                            <img src="./assets/section-2/imagem-3.png" alt="img">
+                        </div>
+                        <button class="animated-button">
+                            <p>Continuar</p>
+                            <img src="./assets/section-2/arrow.svg" alt="Seta">
+                        </button>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </section>
+
+    <section class="section-3">
+        <div class="title-section">
+            <h1>Um pouco do nosso catalogo</h1>
+            <a href="url">ver todo o catalogo <img src="assets/seta_continuar.svg"></a>
+        </div>
+
+        <div class="container-product" id="productContainer">
+
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="./assets/caneca.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Caneca AAPM</p>
+                            <p class="description">Caneca de cerâmica com a logo da AAPM</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <a href="#">
+                            <button>
+                                Página do produto
+                            </button>
+                        </a>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+                        
+            <ul class="product-card" role="list">
+                
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="/website/assets/produtos/fone.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Fone</p>
+                            <p class="description">Fone de fio</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <button>
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+                        
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="/website/assets/produtos/raquete.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Raquete Ping-Pong</p>
+                            <p class="description">Raquete com capa de borracha</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <button>
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+                        
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="/website/assets/produtos/bolinhas.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Bolinha Ping-Pong</p>
+                            <p class="description">Bolinha de plástico</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <button>
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="/website/assets/produtos/regua.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Regua</p>
+                            <p class="description">Régua, Esquadro ou Transferidor</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <button>
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="/website/assets/produtos/fone.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Fone</p>
+                            <p class="description">Fone de fio</p>
+                            <p class="price">Por R$00,00</p>  
+                        </div>
+                        <button href="#">
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+
+            <ul class="product-card" role="list">
+                <li class="product-grid" role="list-item">
+                    <div class="product">
+                        <div class="imagem-card">
+                            <img src="./assets/caneca.png" alt="img">
+                        </div>
+                        <div class="title-product">
+                            <p class="title">Caneca AAPM</p>
+                            <p class="description">Caneca de cerâmica com a logo da AAPM</p>
+                            <p class="price">Por R$10,99</p>  
+                        </div>
+                        <button>
+                            Página do produto
+                        </button>
+                        <a href="#">Comprar ></a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+
+        <div>
+            <ul class="btn-product">
+                <button class="btn-prev" id="btnPrev"><img src="assets/seta_ante.svg"></button>
+                <button class="btn-next" id="btnNext"><img src="assets/seta_prox.svg"></button>
+            </ul>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Desenvolvido por <a href="" id="links">Eduardo A.</a> e <a href="" id="links">Jorge L.</a> </p><span> | </span>
+        <a href="#">Mapa do Site</a>
+    </footer>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+<script src="./script.js"></script>
+
+<script>
+    const buttons = document.querySelectorAll('.hover-button');
+  
+    buttons.forEach(button => {
+      const text = button.querySelector('.hover-text');
+  
+      button.addEventListener('mouseenter', () => {
+        button.style.width = '113px';
+  
+        setTimeout(() => {
+          text.style.display = 'inline';
+          requestAnimationFrame(() => {
+            text.style.opacity = '1';
+          });
+        }, 150);
+      });
+  
+      button.addEventListener('mouseleave', () => {
+        text.style.opacity = '0';
+  
+        setTimeout(() => {
+          text.style.display = 'none';
+          button.style.width = '49px';
+        }, 200);
+      });
+    });
+  </script>
+
+  <script>
+    let currentPosition = 0;
+    const container = document.getElementById('productContainer');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    
+    function getScrollStep() {
+        const cards = container.children;
+        // Se houver menos de 2 cards, não há como calcular um passo.
+        if (cards.length < 2) {
+            return cards.length > 0 ? cards[0].getBoundingClientRect().width : 0;
+        }
+
+        const firstCardRect = cards[0].getBoundingClientRect();
+        const secondCardRect = cards[1].getBoundingClientRect();
+
+        // O passo é a distância do início do primeiro card ao início do segundo.
+        return secondCardRect.left - firstCardRect.left;
+    }
+
+    function getContainerWidth() {
+        return container.parentElement.getBoundingClientRect().width;
+    }
+
+    function getVisibleCards() {
+        const containerWidth = getContainerWidth();
+        const scrollStep = getScrollStep();
+        // Evita divisão por zero se não houver passo de rolagem
+        return scrollStep > 0 ? Math.floor(containerWidth / scrollStep) : 0;
+    }
+
+    function getTotalCards() {
+        return container.children.length;
+    }
+
+    function getMaxPosition() {
+        const totalCards = getTotalCards();
+        const visibleCards = getVisibleCards();
+        const scrollStep = getScrollStep();
+
+        // Se todos os cards já estão visíveis, não há para onde rolar.
+        if (totalCards <= visibleCards) {
+            return 0;
+        }
+
+        // A posição máxima é o número de cards "escondidos" multiplicado pelo passo.
+        return (totalCards - visibleCards) * scrollStep;
+    }
+
+    function updateButtons() {
+        // Adiciona uma pequena tolerância para comparações com ponto flutuante.
+        const tolerance = 1;
+        const maxPosition = getMaxPosition();
+
+        // Se a posição máxima for zero (ou seja, sem rolagem), desabilita ambos os botões.
+        if (maxPosition <= 0) {
+            btnPrev.style.opacity = '0.5';
+            btnPrev.disabled = true;
+            btnNext.style.opacity = '0.5';
+            btnNext.disabled = true;
+            return;
+        }
+
+        // Lógica para o botão "Anterior"
+        if (currentPosition <= 0) {
+            btnPrev.style.opacity = '0.5';
+            btnPrev.disabled = true;
+        } else {
+            btnPrev.style.opacity = '1';
+            btnPrev.disabled = false;
+        }
+
+        // Lógica para o botão "Próximo"
+        if (currentPosition >= maxPosition - tolerance) {
+            btnNext.style.opacity = '0.5';
+            btnNext.disabled = true;
+        } else {
+            btnNext.style.opacity = '1';
+            btnNext.disabled = false;
+        }
+    }
+    
+    function resetPosition() {
+        const maxPosition = getMaxPosition();
+        // Se a posição atual for maior que o novo máximo (ex: tela diminuiu),
+        // ajusta a posição para o novo máximo.
+        if (currentPosition > maxPosition) {
+            currentPosition = maxPosition;
+        }
+        container.style.transform = `translateX(-${currentPosition}px)`;
+        updateButtons();
+    }
+
+
+    btnNext.addEventListener('click', function() {
+        const maxPosition = getMaxPosition();
+        const scrollStep = getScrollStep();
+
+        if (currentPosition < maxPosition) {
+            currentPosition += scrollStep;
+            // Garante que não ultrapasse o limite máximo
+            if (currentPosition > maxPosition) {
+                currentPosition = maxPosition;
+            }
+            container.style.transform = `translateX(-${currentPosition}px)`;
+            updateButtons();
+        }
+    });
+
+    btnPrev.addEventListener('click', function() {
+        const scrollStep = getScrollStep();
+
+        if (currentPosition > 0) {
+            currentPosition -= scrollStep;
+             // Garante que não seja menor que zero
+            if (currentPosition < 0) {
+                currentPosition = 0;
+            }
+            container.style.transform = `translateX(-${currentPosition}px)`;
+            updateButtons();
+        }
+    });
+    
+    function init() {
+        // Um pequeno atraso para garantir que todos os elementos foram renderizados
+        setTimeout(() => {
+            resetPosition();
+        }, 100);
+    }
+
+    // Observer para detectar mudanças no DOM (adição/remoção de produtos)
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.type === 'childList') {
+                init(); // Re-inicializa o carrossel se os filhos mudarem
+            }
+        });
+    });
+
+    observer.observe(container, {
+        childList: true
+    });
+
+    // Event listeners para carregar e redimensionar a janela
+    window.addEventListener('load', init);
+    window.addEventListener('resize', init);
+
+    // Inicializa
+    init();
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleciona todos os itens do menu que têm um submenu
+    const menuItems = document.querySelectorAll('nav .menu-container > ul > li');
+
+    menuItems.forEach(item => {
+        // Verifica se o item realmente tem um submenu
+        const submenu = item.querySelector('.submenu');
+        if (submenu) {
+            // Pega o link principal do item de menu (ex: "Produtos")
+            const mainLink = item.querySelector('a');
+
+            // Adiciona o "escutador" de cliques a esse link
+            mainLink.addEventListener('click', function (event) {
+                // 1. Impede que o link tente navegar para outra página
+                event.preventDefault();
+                event.stopPropagation(); // Impede que o clique se propague para o 'window'
+
+                // Fecha outros submenus que possam estar abertos
+                document.querySelectorAll('.submenu.active').forEach(openSubmenu => {
+                    if (openSubmenu !== submenu) {
+                        openSubmenu.classList.remove('active');
+                    }
+                });
+
+                // 2. Adiciona ou remove a classe 'active' do submenu clicado
+                submenu.classList.toggle('active');
+            });
+        }
+    });
+
+    // BÔNUS: Fecha o submenu se o usuário clicar em qualquer outro lugar da página
+    window.addEventListener('click', function () {
+        document.querySelectorAll('.submenu.active').forEach(submenu => {
+            submenu.classList.remove('active');
+        });
+    });
+});
+</script>
+
+</html>
