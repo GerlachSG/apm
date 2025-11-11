@@ -1,3 +1,3 @@
 Website:
 
-- https://gerlachsg.github.io/apm//src/section-homepage/index
+- https://gerlachsg.github.io/apm/src/pages/index
