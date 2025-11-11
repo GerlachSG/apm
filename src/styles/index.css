@@ -1,0 +1,814 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Inter";
+  font-optical-sizing: auto;
+  background-color: #F0F0F0;
+  color: #000;
+}
+
+a, p {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+a {
+color: #0066CC;
+}
+
+img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* Parte da navbar */
+nav {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  align-items: center; 
+  height: 79px;
+  position: absolute;
+  z-index: 999;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center; 
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul .submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  position: absolute;
+  background-color: #fff;
+  padding: 0;
+  box-shadow: 0 10px 25px #00000020;
+  width: 200px;
+  z-index: -999;
+  transition: all ease 0.5s;
+  opacity: 0;
+  margin-left: 20px;
+  padding: 15px 5px;
+  line-height: 16px;
+  border-radius: 0px 15px 15px 15px;
+}
+
+#btn-associado {
+    position: relative;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px 0px rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    z-index: 1; /* texto do botão sempre na frente */
+}
+  
+.star-1,
+.star-2,
+.star-3,
+.star-4,
+.star-5,
+.star-6 {
+    position: absolute;
+    opacity: 0; /* começam invisíveis */
+    filter: drop-shadow(0 0 0 #fffdef);
+    transition: all 0.8s cubic-bezier(0, 0.4, 0, 1.01);
+    z-index: 0; /* atrás do texto */
+}
+  
+.star-1 { top: 20%; left: 20%; width: 25px; }
+.star-2 { top: 45%; left: 45%; width: 15px; }
+.star-3 { top: 40%; left: 40%; width: 5px; }
+.star-4 { top: 20%; left: 40%; width: 8px; }
+.star-5 { top: 25%; left: 45%; width: 15px; }
+.star-6 { top: 5%;  left: 50%; width: 5px; }
+  
+#btn-associado:hover {
+    box-shadow: 0 0 80px #ffffff8c;
+}
+  
+#btn-associado:hover .star-1 {
+    top: -20%; left: -20%;
+    width: 20px;
+    filter: drop-shadow(0 0 10px #FF8000);
+    opacity: 1;
+}
+  
+#btn-associado:hover .star-2 {
+    top: 35%; left: -25%;
+    width: 15px;
+    filter: drop-shadow(0 0 10px #92B635);
+    opacity: 1;
+}
+  
+#btn-associado:hover .star-3 {
+    top: 80%; left: -10%;
+    width: 10px;
+    filter: drop-shadow(0 0 10px #2BA7E7);
+    opacity: 1;
+}
+  
+#btn-associado:hover .star-4 {
+    top: -25%; left: 105%;
+    width: 20px;
+    filter: drop-shadow(0 0 10px #2F3590);
+    opacity: 1;
+}
+  
+#btn-associado:hover .star-5 {
+    top: 30%; left: 115%;
+    width: 15px;
+    filter: drop-shadow(0 0 10px #D90D7B);
+    opacity: 1;
+}
+  
+#btn-associado:hover .star-6 {
+    top: 80%; left: 105%;
+    width: 10px;
+    filter: drop-shadow(0 0 10px #eb3939);
+    opacity: 1;
+}
+
+.nav-associado{
+  background-image: linear-gradient(to right, #FF8000, #92B635, #2BA7E7, #2F3590, #D90D7B);
+  width: 100%;
+  height: 2px;
+}
+
+.associado-line {
+  height: 1px;
+  width: 90%;
+  margin: 10px 0px;
+  align-self: center;
+  background-color: #000;
+}
+
+nav ul li .submenu.active {
+  z-index: 99;
+  opacity: 1;
+  margin-top: 0;
+}
+
+nav a {
+  color: #1F1F1F;
+  font-size: 16px;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #5e5e5e;
+}
+
+nav a.logo {
+  padding: 0;
+}
+
+nav a.logo img {
+  height: 58px;
+  width: auto;
+  display: block;
+}
+
+#btn {
+  color: #1F1F1F;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute; 
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#btn:hover {
+  color:#5e5e5e;
+}
+
+/* ANIMACAO */
+
+
+.slider {
+position: relative;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+}
+
+.slider-container {
+position: absolute;
+width: 30%;
+height: 70%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+cursor: pointer;
+will-change: transform, opacity, clip-path;
+z-index: 2;
+}
+
+.slide-img {
+position: absolute;
+width: 100%;
+height: 100%;
+will-change: transform;
+overflow: hidden; /* Add this to contain the image */
+}
+
+.slide-img img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Make image cover the container */
+transform: scale(1.5);
+opacity: 0.75;
+will-change: transform;
+transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-container img {
+opacity: 0.9;
+}
+
+.slider-container.active .slide-img {
+overflow: hidden;
+}
+
+.slider-container.active .slide-img img {
+opacity: 1;
+transform: scale(1.2);
+}
+
+
+.slider-container.active {
+width: 30%;
+aspect-ratio: 4/5;
+height: auto !important;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.slider-container:hover .slide-img img {
+transform: scale(1.3);
+}
+
+.slider-title {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 50%;
+height: 60px;
+text-align: center;
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+z-index: 10;
+}
+
+.slider-title h1 {
+position: absolute;
+width: 100%;
+height: 50px;
+text-align: center;
+color: #fff;
+font-size: 50px;
+font-weight: 500;
+}
+
+.slider-title h1 span {
+position: relative;
+display: inline-block;
+transform: translateY(50px);
+will-change: transform;
+}
+
+.slider-counter {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 2.5em;
+text-align: center;
+z-index: 2;
+}
+
+.slider-counter p {
+display:flex;
+gap: 1em;
+justify-content: center;
+color: #303030;
+}
+
+.slider-items {
+position: absolute;
+left: 2.5em;
+bottom: 2.5em;
+z-index: 2;
+}
+
+.slider-items p {
+color: #303030;
+transition: 0.5s color;
+}
+
+.slider-items p.activeItem {
+color:#000;
+font-weight: bold;
+}
+
+.slider-preview {
+position: absolute;
+top:25%;
+left:50%;
+transform: translateX(-50%);
+width: 75%;
+margin: 0 auto;
+height: 100%;
+z-index:0;
+opacity: 0.5;
+overflow: hidden;
+}
+
+.slider-preview img {
+position: absolute;
+top: 0;
+animation: pan 20s infinite linear;
+}
+
+.slider-container.active .slide-img img {
+opacity: 100%;
+
+}
+
+.slider-counter p {
+font-weight: 700;
+}
+
+.slider-title h1 {
+display: none;
+}
+
+@keyframes pan {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.25);
+}
+100% {
+transform: scale(1);
+}
+}
+
+@media (max-width: 900px) {
+.slide-container {
+top: 75%;
+width: 70%;
+height: 50%;
+}
+
+.slider-preview{
+top:0;
+left:0;
+transform: translateX(0%);
+width: 100%;
+height: 100%;
+}
+}
+
+.progress-container {
+position: absolute;
+right: 30px;
+bottom: 5px;
+transform: translateY(-50%);
+z-index: 5;
+}
+
+.progress-circle {
+width: 90px;
+height: 90px;
+opacity: 0.7;
+}
+
+.progress-circle-bg {
+opacity: 0.3;
+}
+
+.progress-circle-fill {
+transition: stroke-dashoffset 0.1s linear;
+}
+
+/* ================================================================== */
+/* ===== BLOCO DE CÓDIGO CORRIGIDO PARA O SLIDER INTERATIVO ===== */
+/* (Substitua as regras antigas por estas) */
+/* ================================================================== */
+
+/* Estilo para o botão "Continuar" que aparece no hover */
+.continue-button {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15; /* Garante que fique acima da imagem */
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    
+    opacity: 0; /* Começa invisível */
+    pointer-events: none; /* Não pode ser clicado quando invisível */
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+
+/* Camada de sobreposição para escurecer a imagem */
+.slide-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    /* A CORREÇÃO DEFINITIVA ESTÁ AQUI: */
+    /* A camada escura ignora totalmente o mouse, resolvendo o problema. */
+    pointer-events: none; 
+}
+
+/* --- A LÓGICA DO HOVER --- */
+
+/* QUANDO o mouse estiver sobre o slide ativo... */
+.slider-container.active:hover .slide-img::before {
+    opacity: 1; /* ... a camada escura aparece. */
+}
+
+.slider-container.active:hover .continue-button {
+    opacity: 1; /* ... o botão aparece. */
+    transform: translate(-50%, -50%) scale(1.05); /* ... ele faz a animação. */
+    pointer-events: auto; /* ... E AGORA ELE PODE SER CLICADO. */
+}
+
+
+/* --- ESTILOS DAS LEGENDAS (Manter como estava) --- */
+.slide-label {
+    position: absolute;
+    bottom: -50px; /* Posição abaixo do contêiner do slide */
+    left: 0;
+    width: 100%;
+    
+    color: #333;
+    font-size: 14px;
+    font-weight: 600;
+    
+    /* A visibilidade é controlada pelo JavaScript (GSAP), mas começamos com opacidade 0 */
+    opacity: 0; 
+    
+    /* Usamos flexbox para alinhar facilmente o texto e a seta */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre o texto e a seta */
+}
+
+/* 2. Estilo base para a seta (que será criada pelo content) */
+.slide-label::before {
+    font-size: 20px;
+    line-height: 1; /* Garante alinhamento vertical perfeito */
+}
+
+/* 3. Estilos específicos para a legenda do slide NEXT (da direita) */
+.slider-container.next .slide-label {
+    justify-content: flex-start; /* Alinha tudo à esquerda */
+    padding-left: 15px;
+}
+.slider-container.next .slide-label::before {
+    content: '→'; /* Adiciona a seta para a direita */
+    order: 2;     /* Coloca a seta DEPOIS do texto */
+}
+
+/* 4. Estilos específicos para a legenda do slide PREV (da esquerda) */
+.slider-container.prev .slide-label {
+    justify-content: flex-end; /* Alinha tudo à direita */
+    padding-right: 15px;
+}
+.slider-container.prev .slide-label::before {
+    content: '←'; /* Adiciona a seta para a esquerda */
+    order: -1;    /* Coloca a seta ANTES do texto */
+}
+
+
+/* SECTION VOCÊ VAI ENCONTRAR */
+
+.section-2 {
+padding: 28px;
+overflow: visible;
+background-color: #EAEAEA;
+border: 100px;
+border-color: #000;
+filter: drop-shadow(0px -4px 10.8px #EAEAEA);
+box-shadow: 0px -4px 10.8px 9.5px #EAEAEA;
+padding-bottom: 60px;
+}
+
+.scroll-card {
+margin-top: 37px;
+list-style-type: none;
+text-decoration: none;
+display: flex;
+justify-content: center;
+gap: 20px;
+}
+
+.scroll-card p {
+font-size: 12px;
+margin-bottom: 4px;
+}
+
+.card-grid {
+display: flex;
+justify-content: space-between;
+background-color: #ffffff;
+
+width: 335px;
+height: 532px;
+border: 10px;
+padding:22px;
+border-radius: 30px;
+}
+
+.titulo-card {
+height: 80px;
+overflow: hidden;
+}
+.imagem-card {
+width:296px;
+height:342px;
+overflow: hidden;
+align-items: center;
+}
+
+.card-grid button.animated-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  background-color: #D9D9D9;
+  border: none;
+  width: 49px; 
+  height: 49px;
+  border-radius: 23px;
+  padding: 0 15px; 
+  float: right;
+  cursor: pointer;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.card-grid button.animated-button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 32px;
+  height: 100%;
+  background-color: #D9D9D9;
+  z-index: 2;
+}
+
+.card-grid button.animated-button p {
+  margin: 0;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(20px); 
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-right: 8px;
+}
+
+.card-grid button.animated-button img {
+  width: 18px;
+  height: auto;
+  position: absolute; 
+  right: 15px;
+  z-index: 3;
+}
+
+.card-grid button.animated-button:hover {
+  width: 120px;
+  justify-content: flex-start; 
+}
+
+.card-grid button.animated-button:hover p {
+  opacity: 1;
+  transform: translateX(0);
+  font-weight: 700;
+}
+
+/* SEÇÃO 3 */
+
+.section-3 {
+margin-top: 10px;
+padding: 28px;
+overflow: hidden;
+border: 100px;
+border-color: #000;
+
+}
+
+.title-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+text-decoration: none;
+}
+
+.title-section a {
+font-size: 15px;
+}
+
+.title-section img {
+height: 18px;
+width: auto;
+vertical-align: middle;
+}
+
+
+.title-section a:hover {
+text-decoration: underline;
+}
+
+.container-product {
+  margin-top: 37px;
+  list-style-type: none;
+  text-decoration: none;
+  display: flex;
+  gap: 20px;
+  text-align: center;
+  transition: transform 0.5s ease;
+  margin-left: 0; 
+}
+
+.product-grid {
+display: flex;
+justify-content: space-between;
+width: 335px;
+height: fit-content;
+border-radius: 30px;
+padding:22px;
+}
+
+.titulo-card {
+height: 80px;
+overflow: hidden;
+}
+
+.imagem-card {
+width:296px;
+height:342px;
+overflow: hidden;
+align-items: center;
+}
+
+.imagem-card img {
+height: auto;
+}
+
+
+.btn-product {
+display: flex;
+justify-content: flex-end;
+gap: 5px;
+margin-top: 2vh;
+}
+
+.btn-product img {
+width: 30px;
+height: auto;
+vertical-align: middle;
+align-items: center;
+}
+
+.btn-product button {
+background-color: #D9D9D9;
+border: none;
+width: fit-content;
+height: auto;
+padding: 10px;
+border-radius: 25px;
+}
+
+.btn-prev {
+opacity: 50%;
+}
+
+.product-card button{
+background-color: #0066CC;
+cursor: pointer;
+color: #fff;
+border: none;
+padding: 15px;
+border-radius: 20px;
+margin-top: 25px;
+margin-right: 20px;
+}
+
+.product-card p {
+margin-top: 15px;
+}
+
+.product-card button {
+transition: ease 0.2s;
+}
+
+.product-card button:hover {
+box-shadow: 0px 2px 6px 0px #4b4b4b96;
+transition: ease 0.2s;
+}
+
+.product a:hover {
+color: #1b8dff;
+}
+
+.title {
+font-size: 20px;
+font-weight: 600;
+}
+
+.description {
+font-weight: 300;
+}
+
+.price {
+font-weight: bold;
+}
+
+
+/* footer */
+
+footer {
+
+display: flex;
+justify-content: center;
+align-items: end;
+padding: 15px;
+background-color: #ebebeb;
+color: #858585;
+height: 70px;
+margin-top: 150px;
+filter: drop-shadow(0px -4px 10.8px #ebebeb);
+box-shadow: 0px -4px 10.8px 3px #ebebeb;
+}
+
+footer p {
+font-size: 17px;
+}
+
+#links {
+color: #5c88b4;
+}
+
+footer span {
+margin: 0px 10px;
+}
+
+footer a {
+font-size: 15px;
+color: #6ba7e2;
+}
+
+
+
+
